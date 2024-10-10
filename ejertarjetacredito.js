@@ -1,15 +1,16 @@
 function comprobarTarjeta(numeroTarjeta){
     let numerosTarjeta = numeroTarjeta.toString().split("").map(Number);
-    console.log(numerosTarjeta)
+    //console.log(numerosTarjeta)
+    
     for(let i = numerosTarjeta.length-2; i >= 0; i-=2){
-        console.log("a")
+        //console.log("a")
         numerosTarjeta[i]*=2;
     }
-    console.log(numerosTarjeta)
+    //console.log(numerosTarjeta)
     let totalnumeros = numerosTarjeta.join("").split("").map(Number);
-    console.log(totalnumeros)
+    //console.log(totalnumeros)
     let sumanumeros = totalnumeros.reduce((accumulator, currentValue) => accumulator + currentValue, 0);//esto esta copiado de aqui https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-    console.log(sumanumeros);
+    //console.log(sumanumeros);
     return sumanumeros % 10 === 0 //si se puede dividir entre 10 esta bien
     
 }
